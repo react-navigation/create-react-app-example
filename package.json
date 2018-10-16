@@ -4,7 +4,8 @@
   "private": true,
   "dependencies": {
     "@react-navigation/core": "3.0.0-alpha.7",
-    "@react-navigation/web": "1.0.0-alpha.2",
+    "@react-navigation/web": "1.0.0-alpha.3",
+    "query-string": "^6.2.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"

@@ -835,10 +835,10 @@
     query-string "^6.2.0"
     react-lifecycles-compat "^3.0.4"
 
-"@react-navigation/web@1.0.0-alpha.2":
-  version "1.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/@react-navigation/web/-/web-1.0.0-alpha.2.tgz#2b3bd9bb31795ec4c60c7cb852415b76a33a3c0c"
-  integrity sha512-qLPWOk8yXB86ch8XiIlq3eCNGKEZmAxO+89QrAuCPdDQuzEvnKV9V4JQMkxDGxR8Uloekl6NjshdKQHj0ykJNw==
+"@react-navigation/web@1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@react-navigation/web/-/web-1.0.0-alpha.3.tgz#3722e00d2516b442eb2f8eaedac78d238b18db84"
+  integrity sha512-qIMXOpZrJ/zqluW+GRu4ii4KnhnbECoAF3w48OfrOL6MN12kkYUjwM3LJOq8yiBE/4KbrH3ausD3rzzzoD4uGQ==
   dependencies:
     "@react-navigation/core" "^3.0.0-alpha.7"
     history "^4.7.2"
