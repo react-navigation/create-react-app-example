@@ -6,7 +6,9 @@ import {
   SwitchRouter,
   SceneView
 } from "@react-navigation/core";
-import createBrowserApp from "@react-navigation/web/createBrowserApp";
+import { createBrowserApp } from "@react-navigation/web";
+
+window.__DEV__ = true;
 
 const Home = () => <div>Home Screen</div>;
 const Profile = () => <div>Profile Screen</div>;
@@ -34,7 +36,8 @@ const AppNavigator = createNavigator(
   SwitchRouter({
     Home,
     Profile
-  })
+  }),
+  {}
 );
 
 const App = createBrowserApp(AppNavigator);

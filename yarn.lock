@@ -824,10 +824,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@react-navigation/core@^3.0.0-alpha.5":
-  version "3.0.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.0.0-alpha.5.tgz#14d1cb48f8ea650eda251b6520383a2b8932310b"
-  integrity sha512-H5stPvJXBzfWyxsIl2TZF3GGDYbhdsvvSPDC4UKVQvg8DJxJHC/v8klzNRAuzsOkeBvEyPdXt0NTotBrar1+oQ==
+"@react-navigation/core@3.0.0-alpha.7", "@react-navigation/core@^3.0.0-alpha.7":
+  version "3.0.0-alpha.7"
+  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.0.0-alpha.7.tgz#10116867febd74a371a7cc393c3dd6071e25ceae"
+  integrity sha512-aUbUAUgNpOppxj59E++S39gBiRCLlttzmwxeZoIJJ57q3IQ2vXNjXiAl66xJeRTIGT5GsEn0nOJO4YeSd5FOfQ==
   dependencies:
     create-react-context "^0.2.3"
     hoist-non-react-statics "^3.0.1"
@@ -835,12 +835,12 @@
     query-string "^6.2.0"
     react-lifecycles-compat "^3.0.4"
 
-"@react-navigation/web@^1.0.0-alpha.0":
-  version "1.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@react-navigation/web/-/web-1.0.0-alpha.0.tgz#c0b9fee49ae82b9cba690d6adad548dc3cfa7038"
-  integrity sha512-WE9R9qahefX/+fHztOmRR+aoFj3PTUwZhWhx7ISj8s2NP2zgDsVorUNRoOqjbHooP/nYBDHwtaa+WwKe6YkXqg==
+"@react-navigation/web@1.0.0-alpha.2":
+  version "1.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@react-navigation/web/-/web-1.0.0-alpha.2.tgz#2b3bd9bb31795ec4c60c7cb852415b76a33a3c0c"
+  integrity sha512-qLPWOk8yXB86ch8XiIlq3eCNGKEZmAxO+89QrAuCPdDQuzEvnKV9V4JQMkxDGxR8Uloekl6NjshdKQHj0ykJNw==
   dependencies:
-    "@react-navigation/core" "^3.0.0-alpha.5"
+    "@react-navigation/core" "^3.0.0-alpha.7"
     history "^4.7.2"
     query-string "^6.2.0"
 
