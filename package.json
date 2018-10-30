@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-navigation/core": "3.0.0-alpha.7",
-    "@react-navigation/web": "1.0.0-alpha.3",
+    "@react-navigation/core": "3.0.0-alpha",
+    "@react-navigation/web": "^1.0.0-alpha",
     "query-string": "^6.2.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0",
     "react-scripts": "2.0.5"
   },
   "scripts": {

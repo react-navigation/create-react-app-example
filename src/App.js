@@ -1,64 +1,35 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   createNavigator,
   SwitchRouter,
-  SceneView,
-  withNavigation,
-  NavigationActions
+  SceneView
 } from "@react-navigation/core";
-import { createBrowserApp } from "@react-navigation/web";
-const queryString = require("query-string");
+import { createBrowserApp, Link } from "@react-navigation/web";
 window.__DEV__ = true;
 
-const getTopNavigation = navigation => {
-  const parent = navigation.dangerouslyGetParent();
-  if (parent) {
-    return getTopNavigation(parent);
-  }
-  return navigation;
+function About() {
+  return (
+    <div>
+      <h2>About Screen</h2>
+    </div>
+  );
+}
+About.path = "";
+About.navigationOptions = {
+  title: "About",
+  linkName: "About Page"
 };
 
-class LinkWithNavigation extends Component {
-  render() {
-    const { children, params, to, navigation } = this.props;
-    const topNavigation = getTopNavigation(navigation);
-    const topRouter = topNavigation.router;
-    const navActionResponse = topRouter.getStateForAction(
-      NavigationActions.navigate({
-        routeName: to,
-        params
-      }),
-      topNavigation.state
-    );
-    const nextState =
-      navActionResponse === null ? topNavigation.state : navActionResponse;
-    const pathAndParams = topRouter.getPathAndParamsForState(nextState);
-    const href = `/${pathAndParams.path}?${queryString.stringify(
-      pathAndParams.params
-    )}`;
-    return (
-      <a
-        href={href}
-        onClick={e => {
-          navigation.navigate(to, params);
-          e.preventDefault();
-        }}
-      >
-        {children}
-      </a>
-    );
-  }
+function Home() {
+  return (
+    <div>
+      <h2>Home Screen</h2>
+      <Link routeName="Profile" params={{ name: "brent" }}>
+        Go to Brent's Profile
+      </Link>
+    </div>
+  );
 }
-const Link = withNavigation(LinkWithNavigation);
-
-const Home = () => (
-  <div>
-    <h2>Home Screen</h2>
-    <Link to="Profile" params={{ name: "Brent" }}>
-      Go to Profile
-    </Link>
-  </div>
-);
 Home.path = "";
 Home.navigationOptions = {
   title: "Home",
@@ -71,10 +42,10 @@ const Profile = ({ navigation }) => (
       {navigation.getParam("name")}
       's Profile
     </h2>
-    <Link to="Home">Go Home</Link>
+    <Link routeName="Home">Go Home</Link>
   </div>
 );
-Profile.path = "person";
+Profile.path = "person/:name";
 Profile.navigationOptions = ({ navigation }) => ({
   title: navigation.getParam("name"),
   linkName: "Profile Page"
@@ -97,22 +68,19 @@ class SidebarView extends React.Component {
           }}
         >
           <h1>Hello, Navigation</h1>
-          {Object.keys(descriptors).map(d => (
-            <div>
-              <Link
-                to={descriptors[d].navigation.state.routeName}
-                navigation={navigation}
-              >
-                {descriptors[d].options.linkName ||
-                  descriptors[d].navigation.state.routeName}
-              </Link>
-            </div>
-          ))}
+          <Link routeName="Home">Home</Link>
+          <Link routeName="About">About</Link>
+          <Link routeName="Profile" params={{ name: "jamie" }}>
+            About Jamie
+          </Link>
+          <Link routeName="Profile" params={{ name: "brent" }}>
+            About Brent
+          </Link>
         </div>
         <div>
           <SceneView
-            navigation={descriptor.navigation}
             component={descriptor.getComponent()}
+            navigation={descriptor.navigation}
           />
         </div>
       </div>
@@ -124,6 +92,7 @@ const AppNavigator = createNavigator(
   SidebarView,
   SwitchRouter({
     Home,
+    About,
     Profile
   }),
   {}
